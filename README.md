@@ -1,4 +1,9 @@
 # my-python-code
+## 重启深信服(SANGFOROPER)
+> Python深信服重启
+
+blog：[Python重启深信服设备](http://blog.51cto.com/kaliarch/2095178)
+
 ## 翻译小工具(FANYI)
 > Python实现翻译小工具
 
