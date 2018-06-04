@@ -10,14 +10,14 @@ import logging
 
 class rdsOper():
     def __init__(self,logger):
-        self.clentoper = client.AcsClient('LTAIhfXlcjyln6tW','GwfAMvR4K2ELmt76184oqLTVgRfAso','cn-shanghai')
+        self.clentoper = client.AcsClient('LTAIhfXlcjyl****','GwfAM344K2ELm345184356TVgRfAso','cn-shanghai')
         self.logger = logger
         self.logger.info("------------------------start exec rds backup API log-------------")
     def backup_instance(self):
         # 设置参数
         request = CreateBackupRequest.CreateBackupRequest()
         request.set_accept_format('json')
-        request.add_query_param('DBInstanceId', 'rm-uf6xv35u1x842y61y')
+        request.add_query_param('DBInstanceId', 'rm-uf6x**5u1x842y61y')
 
         #如果为单库备份，可以添加DBName
         # request.add_query_param('DBName', 'mydb')
