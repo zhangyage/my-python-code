@@ -28,3 +28,10 @@ blog：[利用Python搜索51CTO推荐博客并保存至Excel](http://blog.51cto.
 > Python构建自己的代理库
 
 blog：[Python构建自己的代理库](http://blog.51cto.com/kaliarch/2083997)
+
+
+## Python自定义阿里云RDS备份策略(RDSBAK)
+> Python自定义阿里云RDS备份策略
+
+blog：[Python自定义阿里云RDS备份策略](http://blog.51cto.com/blogger/success/2124609)
+
