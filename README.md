@@ -35,3 +35,7 @@ blog：[Python构建自己的代理库](http://blog.51cto.com/kaliarch/2083997)
 
 blog：[Python自定义阿里云RDS备份策略](http://blog.51cto.com/kaliarch/2124609)
 
+## RDS物理备份恢复至线下IDC服务器实践(RDSBAK)
+> RDS物理备份恢复至线下IDC服务器实践
+
+blog：[RDS物理备份自动恢复至IDC线下服务器实践](#)
