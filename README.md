@@ -39,3 +39,8 @@ blog：[Python自定义阿里云RDS备份策略](http://blog.51cto.com/kaliarch/
 > RDS物理备份恢复至线下IDC服务器实践
 
 blog：[RDS物理备份自动恢复至IDC线下服务器实践](#)
+
+## Python实现端口检测(tcp_port_check)
+> Python实现端口检测
+
+blog：[Python实现端口检测](http://blog.51cto.com/kaliarch/2149228)
