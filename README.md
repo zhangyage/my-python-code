@@ -44,3 +44,8 @@ blog：[RDS物理备份自动恢复至IDC线下服务器实践](#)
 > Python实现端口检测
 
 blog：[Python实现端口检测](http://blog.51cto.com/kaliarch/2149228)
+
+## Python实现ECS自动镜像创建&镜像复制至其他地域(imageoper)
+> Python实现ECS自动镜像创建&镜像复制至其他地域
+
+blog：[Python实现ECS自动镜像创建&镜像复制至其他地域](http://blog.51cto.com/kaliarch/2150076)
