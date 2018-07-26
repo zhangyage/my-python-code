@@ -23,8 +23,7 @@ class EcsOper():
         accessKeyId = config['common']['accessKeyId']
         accessSecret = config['common']['accessSecret']
         self.s_RegionId = config['source']['s_RegionId']
-        self.s_InstanceId = config['source']['s_InstanceId']
-
+        self.s_InstanceId_list = config['source']['s_InstanceId']
         self.s_ImageName = config['source']['s_ImageName']
         self.s_Description = config['source']['s_Description']
 
@@ -37,8 +36,13 @@ class EcsOper():
         logname = logger.create_dir()
         self.logoper = logger.create_logger(logname)
 
+    # 创建实例生成器
+    def _get_Instance(self):
+        for Instance in self.s_InstanceId_list.split(','):
+            yield Instance
+
     # 镜像制作
-    def _create_image(self):
+    def _create_image(self,s_InstanceId):
         """
         创建镜像
         :return:返回镜像id
@@ -47,12 +51,12 @@ class EcsOper():
         request = CreateImageRequest.CreateImageRequest()
         request.set_accept_format('json')
         request.add_query_param('RegionId', self.s_RegionId)
-        request.add_query_param('InstanceId', self.s_InstanceId)
+        request.add_query_param('InstanceId', s_InstanceId)
         request.add_query_param('ImageName', self.s_ImageName + s_timer)
         request.add_query_param('Description', self.s_Description + s_timer)
         response = self.ecshelper.do_action_with_exception(request)
         self.logoper.info('创建镜像任务已提交,镜像id:%s' % json.loads(response)["ImageId"])
-        print('创建镜像任务已提交,镜像id:%s' % json.loads(response)["ImageId"])
+        print('实例%s,创建镜像任务已提交,镜像id:%s' % (s_InstanceId,json.loads(response)["ImageId"]))
         return json.loads(response)["ImageId"]
 
     # 查询镜像状态
@@ -71,7 +75,6 @@ class EcsOper():
         self.logoper.info('镜像创建进度:%s' %json.loads(response)['Images']['Image'][0]['Progress'])
         # 镜像状态
         return json.loads(response)['Images']['Image'][0]['Status']
-
 
     #镜像复制
     def _copy_image(self,imageid):
@@ -103,11 +106,10 @@ class EcsOper():
         print('复制镜像任务已提交,镜像id:%s' % json.loads(response)['ImageId'])
         return json.loads(response)['ImageId']
 
-
     def run(self):
-        s_imageid = self._create_image()
-        self._copy_image(s_imageid)
-
+        for instance_id in self._get_Instance():
+            s_imageid = self._create_image(instance_id)
+            self._copy_image(s_imageid)
 
 if __name__ == '__main__':
     ecsoper = EcsOper(logger)
