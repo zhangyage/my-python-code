@@ -49,3 +49,8 @@ blog：[Python实现端口检测](http://blog.51cto.com/kaliarch/2149228)
 > Python实现ECS自动镜像创建&镜像复制至其他地域
 
 blog：[Python实现ECS自动镜像创建&镜像复制至其他地域](http://blog.51cto.com/kaliarch/2150076)
+
+## Python多线程爬图&Scrapy框架爬图(doutulai)
+> Python多线程爬图&Scrapy框架爬图
+
+blog：[Python多线程爬图&Scrapy框架爬图](http://blog.51cto.com/kaliarch/2162411)
