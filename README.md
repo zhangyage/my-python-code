@@ -54,3 +54,8 @@ blog：[Python实现ECS自动镜像创建&镜像复制至其他地域](http://bl
 > Python多线程爬图&Scrapy框架爬图
 
 blog：[Python多线程爬图&Scrapy框架爬图](http://blog.51cto.com/kaliarch/2162411)
+
+## Python操作CVM(cvmoper)
+> Python操作CVM
+
+blog：[Python操作CVM](http://blog.51cto.com/kaliarch/2165000)
