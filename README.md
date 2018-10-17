@@ -59,3 +59,8 @@ blog：[Python多线程爬图&Scrapy框架爬图](http://blog.51cto.com/kaliarch
 > Python操作CVM
 
 blog：[Python操作CVM](http://blog.51cto.com/kaliarch/2165000)
+
+## 利用Python批量保存51CTO博客
+> 利用Python批量保存51CTO博客
+
+blog：[利用Python批量保存51CTO博客](http://blog.51cto.com/kaliarch/2301359)
